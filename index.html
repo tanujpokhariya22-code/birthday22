@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffeaf3">
+<title>Bbi's Birthday Universe 💗</title>
+<style>
+:root{--pink:#ff5b9b;--deep:#c92769;--ink:#632644;--soft:#fff0f6;--line:#ffd0e2;--glass:rgba(255,255,255,.76)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 10% 8%,#fff 0,transparent 30%),linear-gradient(145deg,#fff4f8,#ffe1ed 58%,#fff7fa);overflow-x:hidden}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #e83c83;outline-offset:3px}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.floaty{position:absolute;bottom:-60px;opacity:.4;animation:rise linear infinite;filter:drop-shadow(0 3px 5px #e83c8322)}@keyframes rise{to{transform:translateY(-120vh) rotate(35deg);opacity:0}}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(14px,4vw,42px);background:#fff9fcdd;backdrop-filter:blur(15px);border-bottom:1px solid #ffffffb8}
+.brand{font-weight:900;color:var(--deep);white-space:nowrap}.navlinks{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.navlinks button{border:0;background:transparent;color:var(--ink);padding:8px 10px;border-radius:999px;font-size:.85rem}.navlinks button.active,.navlinks button:hover{background:#ffe0ec;color:var(--deep)}
+main{position:relative;z-index:1}.page{display:none;min-height:78vh;padding:clamp(38px,7vw,82px) 18px;max-width:1000px;margin:auto;animation:pageIn .65s ease both}.page.active{display:block}@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center}.panel{background:var(--glass);border:1px solid #ffffffed;box-shadow:0 18px 65px #c84d7d1b;backdrop-filter:blur(12px);border-radius:30px;padding:clamp(23px,5vw,50px)}.hero .panel{width:min(100%,800px)}
+.eyebrow{font-size:.75rem;font-weight:850;letter-spacing:.17em;text-transform:uppercase;color:var(--deep)}h1{font-size:clamp(3.3rem,12vw,7rem);line-height:.92;letter-spacing:-.065em;color:var(--deep);margin:22px 0}h2{font-size:clamp(2rem,7vw,3.5rem);letter-spacing:-.045em;line-height:1.05;margin:12px 0 18px}h3{margin:10px 0;color:var(--deep)}p{line-height:1.8}.subtitle{font-size:clamp(1rem,3vw,1.25rem);max-width:620px;margin:0 auto 24px}.section-head{text-align:center;max-width:730px;margin:0 auto 32px}.btn{border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ff76ae,#e83c83);color:white;font-weight:800;box-shadow:0 9px 25px #e83c8330;transition:transform .22s,box-shadow .22s}.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 13px 28px #e83c8340}.btn.alt{background:white;color:var(--deep);border:1px solid var(--line);box-shadow:none}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap}.muted{font-size:.86rem;opacity:.75}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.tile{background:#fff9fc;border:1px solid var(--line);border-radius:23px;padding:22px;transition:transform .25s}.tile:hover{transform:translateY(-5px)}.big-emoji{font-size:3rem;display:block;margin-bottom:8px}.letter{white-space:pre-line;font-size:1.08rem;max-width:720px;margin:auto}.signature{text-align:right;font-family:Georgia,serif;font-size:1.6rem;font-style:italic;color:var(--deep);margin-top:20px}
+.memories{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.memory{position:relative;min-height:220px;border:2px dashed #f5a2c4;background:#fff9fc;border-radius:22px;display:grid;place-items:center;text-align:center;overflow:hidden;padding:14px}.memory input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}.memory img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.caption{z-index:1;position:relative;background:#fffdf0dc;padding:10px;border-radius:12px;font-size:.85rem}.memory:has(img) .caption{align-self:end;margin:8px}
+.timeline{max-width:680px;margin:auto;display:grid;gap:14px}.moment{display:grid;grid-template-columns:48px 1fr;gap:15px;align-items:start}.dot{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#ffe0ec;font-size:1.3rem}.moment .tile{padding:18px}.cake-wrap{text-align:center}.cake{font-size:clamp(7rem,25vw,11rem);display:inline-block;filter:drop-shadow(0 12px 10px #d9347825)}.cake.lit{animation:pop .8s ease}@keyframes pop{50%{transform:scale(1.17) rotate(-6deg)}}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}.timebox{min-width:75px;background:#fff;border:1px solid var(--line);border-radius:17px;padding:13px}.timebox strong{display:block;font-size:1.8rem;color:var(--deep)}.timebox span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}.secret{display:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;margin:20px auto 0;max-width:650px;animation:pageIn .6s}.secret.show{display:block}.question{font-weight:800;margin:14px 0}.answer{display:none;padding:12px 15px;background:#fff0f6;border-radius:14px;margin-top:10px}.answer.show{display:block}.progress{height:5px;background:#ffe0ec}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff8bb8,#c92769);transition:width .4s}footer{text-align:center;padding:28px 15px 40px;position:relative;z-index:1}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#6c2448;color:white;border-radius:999px;padding:12px 18px;opacity:0;transition:.3s;z-index:40;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.sparkle{display:inline-block;animation:twinkle 1.6s ease-in-out infinite}@keyframes twinkle{50%{transform:scale(1.25) rotate(15deg)}}.heart-btn{border:1px solid var(--line);background:white;color:var(--deep);border-radius:16px;padding:13px 16px;font-weight:750}.heart-btn:hover{background:#fff0f6}
+.video-card{max-width:760px;margin:0 auto;text-align:center}.video-frame{overflow:hidden;border:5px solid #fff;border-radius:24px;box-shadow:0 18px 50px #b92b6320;background:#2b1220;margin:22px auto}.video-frame video{display:block;width:100%;max-height:72vh;object-fit:contain;background:#170d13}.video-note{font-size:.92rem;color:var(--muted);margin-top:12px}
+@media(max-width:680px){nav{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start}.navlinks button{padding:7px 9px}.two-col{grid-template-columns:1fr}.memories{grid-template-columns:1fr}.memory{min-height:250px}.page{padding:42px 15px}.hero{min-height:75vh}.panel{border-radius:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+<nav>
+  <div class="brand">♡ Bbi's Universe</div>
+  <div class="navlinks" aria-label="Website pages">
+    <button class="active" data-page="home">Home</button><button data-page="letter">Love Letter</button><button data-page="memories">Memories</button><button data-page="video">Our Special Video 💗</button><button data-page="story">Our Story</button><button data-page="reasons">Reasons</button><button data-page="cake">Birthday Cake</button><button data-page="surprise">Final Surprise</button>
+  </div>
+</nav>
+<div class="progress"><span id="progress"></span></div>
+<main>
+<section class="page hero active" id="home"><div class="panel">
+  <div class="eyebrow"><span class="sparkle">✦</span> A tiny website for my favourite person <span class="sparkle">✦</span></div>
+  <h1>Happy Birthday,<br>Bbi 💗</h1>
+  <p class="subtitle">Aaj ka din sirf tumhare naam. Maine tumhare liye ek chhoti si duniya banayi hai — full of love, memories, wishes and little surprises. Ready, mere bbu?</p>
+  <div class="actions"><button class="btn" data-go="letter">Start our little journey 💌</button><button class="btn alt" id="musicBtn">♫ Play romantic vibes</button></div>
+  <p class="muted">Best experience ke liye pages ko ek-ek karke explore karna. ✨</p>
+</div></section>
+
+<section class="page" id="letter"><div class="section-head"><div class="eyebrow">Page 02 · From my heart</div><h2>A letter for my Bbi 💌</h2><p>Kuch baatein jo shayad main har din perfect words mein nahi keh pata.</p></div>
+<div class="panel letter">Bbi, meri favourite person,
+
+Happy Birthday,mere bbi. 💗
+
+Sbse pahle to bhtt sara i love you 💞 or happy birthday mere bbu uuuuuuuuuuuuuuuuuummmmmmmmmmmmmmmmmaaaaaaaaaaahhhhhhhhhhhh🥹
+
+Tum meri life ka vo hissa ho jo normal days ko bhi special bana deta h. Tumhari smile, tumhari baatye, or tumhara mere saath hona — these little things mean more to me than I can explain.
+
+M chahta hu ki tum hamesha khush raho, apne saare dreams poore karo, or jab bhi life difficult lge, tumhe yaad rahe ki koi h jo tumhari smile dekh kar khud khush ho jata hai.
+
+Aaj tumhara day hai, so make a wish, smile a little extra, aur yaad rakhna: you deserve all the love, happiness and beautiful things in this world.
+
+Thank you for being you. I hope this birthday of your life brings you endless reasons to smile. And I hope I get to be part of many more birthdays with you. 🥹
+
+Happy Birthday once again, Bbi. I love you more than these words can say. ❤️
+<div class="signature">Forever yours,<br>Budy ♡</div></div>
+<div class="actions" style="margin-top:24px"><button class="btn" data-go="memories">Next: Our memories 📸</button></div></section>
+
+<section class="page" id="memories"><div class="section-head"><div class="eyebrow">Page 03 · Little moments</div><h2>Our memory gallery 📸</h2><p>Har photo ke peeche ek feeling hoti hai. or in photo ko dekh ke mujhe acha lgta h.</p></div>
+<div class="memories">
+<label class="memory"><img src="1000349291.jpg" alt="Responsive image" style="max-width: 40%; height: auto; border-radius: 12px;"><span class="caption">🌷 My favourite moment<br></span></label>
+<label class="memory"><img src="1000349292.jpg" alt="Responsive image" style="max-width: 50%; height: auto; border-radius: 12px;"><span class="caption">🌷jab tum chote the<br></span></label>
+<label class="memory"><img src="1000349293.jpg" alt="Responsive image" style="max-width: auto; height: auto; border-radius: 12px;"><span class="caption">💞 babu<br></span></label>
+<label class="memory"><img src="1000349294.jpg" alt="Responsive image" style="max-width: auto; height: auto; border-radius: 12px;"><span class="caption">✨chote babu<br></span></label>
+<label class="memory"><img src="1000349303.jpg" alt="Responsive image" style="max-width: auto; height: auto; border-radius: 12px;"><span class="caption">🫶 hum dono<br></span></label>
+<label class="memory"><img src="1000349304.jpg" alt="Responsive image" style="max-width: 40%; height: auto; border-radius: 12px;"><span class="caption">💗ab bde hogye<br></span></label>
+</div><p class="muted" style="text-align:center">Important: ye saari photo tumne pahle bhi dekhi hungi pr koi nhi .</p>
+<div class="actions"><button class="btn" data-go="story">Next: Our story 🥹</button></div></section>
+
+
+<section class="page" id="video"><div class=ecti"son-head"><div class="eyebrow">Page 04 · Just press play</div><h2> Special Video for you💗</h2><p>A little video, a million feelings — made with love, just for you, Bbi.</p></div>
+<div class="panel video-card"><div style="font-size:2.2rem" class="sparkle">♡ 🥹 ♡</div><h3>happy birthday bbi  🎥</h3><div class="video-frame"><video controls playsinline preload="metadata"><source src="bbi-special-video.mp4" type="video/mp4">Your browser does not support this video. Please try opening it in an updated browser.</video></div><p class="video-note">Press play and enjoy,  💕</p><div class="actions" style="justify-content:center"><button class="btn" data-go="story">Next: Our story 🌙</button></div></div></section>
+
+<section class="page" id="video"><div class=ecti"son-head"><div class="eyebrow"> Just press play</div><h2>hero bbi  💗</h2><p>chasme mai to kisi heroein se kam nhi ho.</p></div>
+<div class="panel video-card"><div style="font-size:2.2rem" class="sparkle">♡ ✨ ♡</div><h3>hero bbi 🎥</h3><div class="video-frame"><video controls playsinline preload="metadata"><source src="1000349273.mp4" type="video/mp4">Your browser does not support this video. Please try opening it in an updated browser.</video></div><p class="video-note">Press play and enjoy, 💕</p><div class="actions" style="justify-content:center"><button class="btn" data-go="story">Next: Our story 🌙</button></div></div></section>
+
+<section class="page" id="video"><div class=ecti"son-head"><div class="eyebrow"> Just press play</div><h2>pyare babu💗</h2><p>kitne pyare lgte ho tum mere babu.</p></div>
+<div class="panel video-card"><div style="font-size:2.2rem" class="sparkle">♡ 🫶 ♡</div><h3>pyare babu🎥</h3><div class="video-frame"><video controls playsinline preload="metadata"><source src="1000349290.mp4" type="video/mp4">Your browser does not support this video. Please try opening it in an updated browser.</video></div><p class="video-note">Press play and enjoy, 💕</p><div class="actions" style="justify-content:center"><button class="btn" data-go="story">Next: Our story 🌙</button></div></div></section>
+
+<section class="page" id="story"><div class="section-head"><div class="eyebrow">Page 05 · Us</div><h2>Our little love story 🌙</h2><p>Ek story jo mere liye kisi movie se kam nahi.</p></div>
+<div class="timeline">
+<div class="moment"><div class="dot">✨</div><div class="tile"><h3>The beginning</h3><p>Jab tum meri life mein aaye, kuch ordinary moments bhi special lagne lage. Kbhi-kbhi best things bina warning ke life mein aa jaati h.</p></div></div>
+<div class="moment"><div class="dot">😊</div><div class="tile"><h3>Your smile</h3><p>Tumhari smile meri favourite notification jaisi h — bina reason ke bhi mood achha kar deti h.</p></div></div>
+<div class="moment"><div class="dot">🫶</div><div class="tile"><h3>Our little things</h3><p>Random talks, or chote chote mjak, choti si nok-jhok aur vo moments jo sirf hum samajhte h — these are my favourite memories.</p></div></div>
+<div class="moment"><div class="dot">💗</div><div class="tile"><h3>More chapters to come</h3><p>Story abhi khatam nahi hui, Bbi. I hope we keep making beautiful memories, one day at a time. tum hmesa mere liye bht khass rahe ho or agye bhi rahogye </p></div></div>
+<div class="moment"><div class="dot">🥹</div><div class="tile"><h3>Tumhara gussa</h3><p>tumhara gussa to mano aisa h ki bss binaa gun ke goliya chal rahi ho pr mujhe tum gusse m bhi bht ache lgte ho.</p></div></div>
+<div class="moment"><div class="dot">💞</div><div class="tile"><h3>Tumhara Pyar</h3><p>tumhare pyar ke bare m kya hi kahu kyu ki tumhare jaisa pyr koi bhi nhi kar skta tum one n only ho.</p></div></div>
+</div><div class="actions" style="margin-top:25px"><button class="btn" data-go="reasons">Next: Why I love you 💕</button></div></section>
+
+<section class="page" id="reasons"><div class="section-head"><div class="eyebrow">Page 06 · A few reasons</div><h2>Why you're so special 💖</h2><p>Tap each card to open a little reminder.</p></div>
+<div class="two-col">
+<div class="tile"><span class="big-emoji">😊</span><h3>Your smile</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">Tumhari smile ek simple day ko bhi beautiful bana sakti hai. Never stop smiling, Bbi.</div></div>
+<div class="tile"><span class="big-emoji">🌷</span><h3>Your heart</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">Tum jis tarah care karte ho, woh chhoti-chhoti baato m bhi feel hota h.</div></div>
+<div class="tile"><span class="big-emoji">😂</span><h3>Your silly side</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">Tumhare saath hasi-mazaak aur random baatye bhi favourite memories ban jaati hain.</div></div>
+<div class="tile"><span class="big-emoji">🫶</span><h3>Your anger</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tumhara gussa uski to baat hi alag  h gusse m to tum se koi nhi jeet skta pr mujhe tumhara gussa bhi pasnd h.</div></div>
+<div class="tile"><span class="big-emoji">💗</span><h3>Your love</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tumhara pyar krna or pyar krne ka tarika mujhe bht achaa lgta h kyuki tum dil se rista nibhate ho.</div></div>
+<div class="tile"><span class="big-emoji">✨</span><h3>Your care</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tum jab bhi kisi ke bare m sochte ho to uski care khud se jyada krte ho khud soche bina.</div></div>
+<div class="tile"><span class="big-emoji">🥹</span><h3>Your emotions</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tum bht emotional bhi ho bht jaldi bura maan jate h or baato ko dil se lga lete ho pr koi nhi m hu na.</div></div>
+<div class="tile"><span class="big-emoji">💝</span><h3>Your attitude</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tumhara attitude to bht high h or possitive bhi h mtlb tum kahi bhi jaogye to apne dam pe sab kuch kr skte ho.</div></div>
+<div class="tile"><span class="big-emoji">💞</span><h3>Your vibe</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tumahari vibe bht Friendly or family type ki bht jldi se dost bna lete ho or unko apna diwana bna lete ho ab ise glt mtt smjhna.</div></div>
+<div class="tile"><span class="big-emoji">🌸</span><h3>Your nature</h3><button class="heart-btn reveal-reason">Open this reason ♡</button><div class="answer">tumhara nature bht acha bht pyara bht bht bht jyada acha kyu ki tum mere ho isliye  i love you bbu.</div></div>
+</div><div class="actions" style="margin-top:25px"><button class="btn" data-go="cake">Next: Make a wish 🎂</button></div></section>
+
+<section class="page" id="cake"><div class="section-head"><div class="eyebrow">Page 07 · Birthday magic</div><h2>Make a wish, Bbi 🎂</h2><p>Ek deep breath lo, apni wish socho, aur cake par tap karo.</p></div>
+<div class="panel cake-wrap"><div class="cake" id="cakeEmoji">🎂</div><div><button class="btn" id="wishBtn">Light the candles ✨</button></div><p id="cakeMessage">May your sweetest wishes find their way to you.</p><div class="countdown" id="countdownBoxes"><div class="timebox"><strong>--</strong><span>Days</span></div><div class="timebox"><strong>--</strong><span>Hours</span></div><div class="timebox"><strong>--</strong><span>Minutes</span></div><div class="timebox"><strong>--</strong><span>Seconds</span></div></div><label for="birthdayDate"><strong>Set birthday date:</strong></label> <input id="birthdayDate" type="date" style="margin:10px;padding:10px;border:1px solid #f5a2c4;border-radius:12px;color:#632644;background:white"></div>
+<div class="actions" style="margin-top:25px"><button class="btn" data-go="surprise">One last surprise 💝</button></div></section>
+
+<section class="page" id="surprise"><div class="section-head"><div class="eyebrow">Page 08 · Just for you</div><h2>The last little surprise 💝</h2><p>Yahan tak aane ke liye thank you, mere bbi.</p></div>
+<div class="panel" style="text-align:center"><div style="font-size:4rem" class="sparkle">💗</div><h2>One last thing, Bbi…</h2><p style="max-width:650px;margin:0 auto 22px">Agar main tumhe ek hi gift de sakta, toh woh hota ki tum khud ko meri nazron se dekh pao — then you’d know how truly special you are. You are loved, today and every day. I hope this birthday brings you peace, laughter, new adventures, and all the little things your heart wishes for.</p><p style="font-size:1.3rem;font-weight:800;color:var(--deep)">Happy Birthday, my favourite human. I love you. ❤️</p><p style="font-family:Georgia,serif;font-style:italic;font-size:1.5rem">— Forever yours, Budy</p><div class="actions"><button class="btn" id="confettiBtn">Send you a shower of love 💕</button><button class="btn alt" data-go="home">Replay from the beginning ↺</button></div></div></section>
+</main>
+<footer>Built with love by <strong>Budy</strong> for <strong>Bbi</strong> 💗<br><span class="muted">Eight little pages. One very big feeling.</span></footer>
+<div class="toast" id="toast">A little love sent your way 💗</div>
+<script>
+const sky=document.getElementById('sky');for(let i=0;i<32;i++){const s=document.createElement('span');s.className='floaty';s.textContent=['♡','♥','✧','💗','✿'][i%5];s.style.left=Math.random()*100+'%';s.style.fontSize=12+Math.random()*25+'px';s.style.animationDuration=10+Math.random()*17+'s';s.style.animationDelay=-Math.random()*24+'s';sky.appendChild(s)}
+const pages=[...document.querySelectorAll('.page')],navBtns=[...document.querySelectorAll('[data-page]')],progress=document.getElementById('progress');
+function go(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));navBtns.forEach(b=>b.classList.toggle('active',b.dataset.page===id));const idx=pages.findIndex(p=>p.id===id);progress.style.width=((idx+1)/pages.length*100)+'%';window.scrollTo({top:0,behavior:'smooth'});if(id==='surprise')burst()}
+navBtns.forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+function burst(){for(let i=0;i<35;i++){const e=document.createElement('span');e.textContent=['💗','💖','💕','✨','🌸','🎂','💝','🥹','🫶','🌷'][Math.floor(Math.random()*10)];e.style.cssText=`position:fixed;z-index:60;pointer-events:none;left:${Math.random()*100}vw;top:${Math.random()*85}vh;font-size:${16+Math.random()*24}px;transition:transform 1.6s ease,opacity 1.6s ease;`;document.body.appendChild(e);requestAnimationFrame(()=>{e.style.transform=`translate(${Math.random()*180-90}px,${-80-Math.random()*220}px) rotate(${Math.random()*180-90}deg) scale(.6)`;e.style.opacity='0'});setTimeout(()=>e.remove(),1700)}}
+document.getElementById('confettiBtn').addEventListener('click',()=>{burst();const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)});
+document.querySelectorAll('.reveal-reason').forEach(b=>b.addEventListener('click',()=>{const a=b.nextElementSibling;a.classList.toggle('show');b.textContent=a.classList.contains('show')?'Close reason ×':'Open this reason ♡'}));
+document.querySelectorAll('.memory input').forEach(input=>input.addEventListener('change',e=>{const f=e.target.files&&e.target.files[0];if(!f)return;const label=e.target.closest('.memory');let img=label.querySelector('img');if(!img){img=document.createElement('img');label.appendChild(img)}const r=new FileReader();r.onload=x=>img.src=x.target.result;r.readAsDataURL(f)}));
+document.getElementById('wishBtn').addEventListener('click',()=>{const c=document.getElementById('cakeEmoji');c.classList.remove('lit');void c.offsetWidth;c.classList.add('lit');document.getElementById('cakeMessage').textContent='✨ Wish made! May your sweetest dreams come true, Bbi! ✨';burst()});
+// Friendly synthesized notes, only after a user tap (no external/copyrighted audio file).
+let ctx=null,timer=null,on=false,n=0;const tones=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46];
+function note(){if(!ctx||!on)return;const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=tones[n++%tones.length];g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.045,ctx.currentTime+.04);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.4);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.42)}
+document.getElementById('musicBtn').addEventListener('click',async()=>{if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')await ctx.resume();on=!on;const b=document.getElementById('musicBtn');if(on){note();timer=setInterval(note,500);b.textContent='♫ Pause music'}else{clearInterval(timer);b.textContent='♫ Play romantic vibes'}});
+const date=document.getElementById('birthdayDate'),now0=new Date();date.value=`${now0.getFullYear()}-${String(now0.getMonth()+1).padStart(2,'0')}-${String(now0.getDate()).padStart(2,'0')}`;
+function count(){if(!date.value)return;const [y,m,d]=date.value.split('-').map(Number);let target=new Date(y,m-1,d);const now=new Date();if(target<new Date(now.getFullYear(),now.getMonth(),now.getDate()))target=new Date(y+1,m-1,d);let diff=Math.max(0,target-now);const v=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60];document.getElementById('countdownBoxes').innerHTML=v.map((x,i)=>`<div class="timebox"><strong>${String(x).padStart(2,'0')}</strong><span>${['Days','Hours','Minutes','Seconds'][i]}</span></div>`).join('')}
+date.addEventListener('change',count);count();setInterval(count,1000);go('home');
+</script>
+</body></html>
